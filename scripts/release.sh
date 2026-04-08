@@ -34,6 +34,7 @@ xcodebuild archive \
 APP_PATH=$(find "$ARCHIVE_PATH/Products" -name "DigBar.app" | head -1)
 mkdir -p build/export
 cp -R "$APP_PATH" "$EXPORT_PATH/DigBar.app"
+codesign --force --deep --sign - "$EXPORT_PATH/DigBar.app"
 cd build/export && zip -r "../DigBar.zip" DigBar.app && cd ../..
 
 echo "✅ 빌드 완료: $ZIP_PATH"

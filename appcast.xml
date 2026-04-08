@@ -7,15 +7,15 @@
         <language>ko</language>
         <item>
             <title>버전 1.0.0</title>
-            <pubDate>Tue, 08 Apr 2026 12:00:00 +0900</pubDate>
-            <sparkle:version>1</sparkle:version>
+            <pubDate>Wed, 08 Apr 2026 12:45:50 +0900</pubDate>
+            <sparkle:version>202604081245</sparkle:version>
             <sparkle:shortVersionString>1.0.0</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
             <enclosure
                 url="https://github.com/leehoins/digbar/releases/download/v1.0.0/DigBar.zip"
-                length="1000000"
+                length="3285300"
                 type="application/octet-stream"
-                sparkle:edSignature="REPLACE_WITH_SIGNATURE"
+                sparkle:edSignature="n5VEVSF8Ffu6BUwbXMzGp/tNXSczvDyZTPfMja9lX8Q3NB2foAeR61pJqC/uMCjgwcEY0XlikokZ3GTR9UGFDA=="
             />
         </item>
     </channel>
