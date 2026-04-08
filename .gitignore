@@ -1,0 +1,16 @@
+# Xcode
+*.xcuserstate
+xcuserdata/
+DerivedData/
+*.xcworkspace/xcuserdata/
+.DS_Store
+
+# Build
+build/
+
+# SPM
+.build/
+*.resolved
+
+# Playwright
+.playwright-mcp/

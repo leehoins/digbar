@@ -1,0 +1,426 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		027D22B9F8C550F95A28B045 /* WatchlistItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9212D2BAF3B2A6E40E484A09 /* WatchlistItem.swift */; };
+		111011CF09F2892790402F7B /* Sparkle in Frameworks */ = {isa = PBXBuildFile; productRef = C7ED1A136087EB703D3EE9CA /* Sparkle */; };
+		2C48B123260FD89954E1F4FB /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 866B26C6761EBD53D0BD59AB /* DataManager.swift */; };
+		321E793B05CB3357DDCA38A9 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = B69942A3412ECEC5355B7934 /* main.swift */; };
+		3FF45DFE24E99F3DB4724C82 /* AppSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8D2709784F44BF7D8D9CCE6 /* AppSettings.swift */; };
+		4CC4417AD9C5CC3F963D0D1D /* StatusMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4695ABA35F27A814095B1A5 /* StatusMenuView.swift */; };
+		533B43EE61ABB8DAF6CC7B96 /* BinanceService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7068EEA4ECA20EA496D7F2F /* BinanceService.swift */; };
+		5CE83A39DAC03979F2531A30 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0FA0810474F3CA0BAE10DE4 /* SettingsView.swift */; };
+		5DB37280D6BF2047E753CF3A /* TossInvestService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBD78004BFAD148B65A2EAF5 /* TossInvestService.swift */; };
+		7D6C9FF9EB08EC2EA70FCD8A /* CryptoHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03D07DCBB447254E6E3C4A4C /* CryptoHelper.swift */; };
+		812F9EF79548F6922D1219D3 /* HelpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2564B90154E1F3126B9464E8 /* HelpView.swift */; };
+		9101E920BF0A6B939CF2E31C /* WatchlistManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFBE534C635D367D65870CB8 /* WatchlistManager.swift */; };
+		95446D261E44043D7CCCED53 /* KISService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE16EBDA76BD1D96533FC712 /* KISService.swift */; };
+		9C1EBCC74D44C0ED89CEC854 /* PortfolioHistory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BF4D1EA32562FAE9A624396 /* PortfolioHistory.swift */; };
+		A4C484064F1D9552AD4A5CE2 /* KeychainHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FD0571ACBB2F900DED28335 /* KeychainHelper.swift */; };
+		BA52ECD96A6DA139E6CCBFEC /* MarketIndexService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00F225FFD4BD41ED276784A8 /* MarketIndexService.swift */; };
+		CDB3623916E60321BD9808B4 /* BinanceWebSocketService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AB71CC85ED6DD035C4C3628 /* BinanceWebSocketService.swift */; };
+		D9983C832EE67C40DA211B4B /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB8935EF1E49965B6F19BF8C /* Models.swift */; };
+		FACE6B0BF3431D43A863B104 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D1DE3A9E9A4ECBD928D47BD /* AppDelegate.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		00F225FFD4BD41ED276784A8 /* MarketIndexService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarketIndexService.swift; sourceTree = "<group>"; };
+		03D07DCBB447254E6E3C4A4C /* CryptoHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoHelper.swift; sourceTree = "<group>"; };
+		2564B90154E1F3126B9464E8 /* HelpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpView.swift; sourceTree = "<group>"; };
+		3AB71CC85ED6DD035C4C3628 /* BinanceWebSocketService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BinanceWebSocketService.swift; sourceTree = "<group>"; };
+		3FD0571ACBB2F900DED28335 /* KeychainHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainHelper.swift; sourceTree = "<group>"; };
+		7D1DE3A9E9A4ECBD928D47BD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		866B26C6761EBD53D0BD59AB /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
+		8BF4D1EA32562FAE9A624396 /* PortfolioHistory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PortfolioHistory.swift; sourceTree = "<group>"; };
+		9212D2BAF3B2A6E40E484A09 /* WatchlistItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchlistItem.swift; sourceTree = "<group>"; };
+		A7068EEA4ECA20EA496D7F2F /* BinanceService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BinanceService.swift; sourceTree = "<group>"; };
+		AC3CAE45C68DC172B648A637 /* DigBar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DigBar.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B0FA0810474F3CA0BAE10DE4 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		B69942A3412ECEC5355B7934 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		BB8935EF1E49965B6F19BF8C /* Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
+		BBD78004BFAD148B65A2EAF5 /* TossInvestService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TossInvestService.swift; sourceTree = "<group>"; };
+		CFBE534C635D367D65870CB8 /* WatchlistManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchlistManager.swift; sourceTree = "<group>"; };
+		DE16EBDA76BD1D96533FC712 /* KISService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KISService.swift; sourceTree = "<group>"; };
+		E4695ABA35F27A814095B1A5 /* StatusMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusMenuView.swift; sourceTree = "<group>"; };
+		E8D2709784F44BF7D8D9CCE6 /* AppSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppSettings.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		2F3BACFA3C9028A9D4229DBF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				111011CF09F2892790402F7B /* Sparkle in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1C450021D3347DA84CE8133E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				AC3CAE45C68DC172B648A637 /* DigBar.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		36178C3752ED63181E615846 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				BB8935EF1E49965B6F19BF8C /* Models.swift */,
+				8BF4D1EA32562FAE9A624396 /* PortfolioHistory.swift */,
+				9212D2BAF3B2A6E40E484A09 /* WatchlistItem.swift */,
+				CFBE534C635D367D65870CB8 /* WatchlistManager.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		38AA06FD29CBFC861F511C09 /* DigBar */ = {
+			isa = PBXGroup;
+			children = (
+				7D1DE3A9E9A4ECBD928D47BD /* AppDelegate.swift */,
+				E8D2709784F44BF7D8D9CCE6 /* AppSettings.swift */,
+				866B26C6761EBD53D0BD59AB /* DataManager.swift */,
+				B69942A3412ECEC5355B7934 /* main.swift */,
+				36178C3752ED63181E615846 /* Models */,
+				CBF54ACD4B153631053DF812 /* Services */,
+				581C8634E5FA630776C73D64 /* Utilities */,
+				8C40AD691FDE67D516A61C5E /* Views */,
+			);
+			path = DigBar;
+			sourceTree = "<group>";
+		};
+		581C8634E5FA630776C73D64 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				03D07DCBB447254E6E3C4A4C /* CryptoHelper.swift */,
+				3FD0571ACBB2F900DED28335 /* KeychainHelper.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		775FBAFA6C0F359B722B242A = {
+			isa = PBXGroup;
+			children = (
+				8314827916BEF7596291211A /* Sources */,
+				1C450021D3347DA84CE8133E /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		8314827916BEF7596291211A /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				38AA06FD29CBFC861F511C09 /* DigBar */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		8C40AD691FDE67D516A61C5E /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				2564B90154E1F3126B9464E8 /* HelpView.swift */,
+				B0FA0810474F3CA0BAE10DE4 /* SettingsView.swift */,
+				E4695ABA35F27A814095B1A5 /* StatusMenuView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		CBF54ACD4B153631053DF812 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				A7068EEA4ECA20EA496D7F2F /* BinanceService.swift */,
+				3AB71CC85ED6DD035C4C3628 /* BinanceWebSocketService.swift */,
+				DE16EBDA76BD1D96533FC712 /* KISService.swift */,
+				00F225FFD4BD41ED276784A8 /* MarketIndexService.swift */,
+				BBD78004BFAD148B65A2EAF5 /* TossInvestService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		5962D41C566AB7713E116C5A /* DigBar */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 25C1BD53E7F50F675ED9953A /* Build configuration list for PBXNativeTarget "DigBar" */;
+			buildPhases = (
+				4A7BBFF403EB7CC01F7B1484 /* Sources */,
+				2F3BACFA3C9028A9D4229DBF /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = DigBar;
+			packageProductDependencies = (
+				C7ED1A136087EB703D3EE9CA /* Sparkle */,
+			);
+			productName = DigBar;
+			productReference = AC3CAE45C68DC172B648A637 /* DigBar.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		785BAA65F7D206DC543CA464 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = YES;
+				LastUpgradeCheck = 1500;
+				TargetAttributes = {
+				};
+			};
+			buildConfigurationList = E1FC79D1401C433C931006FD /* Build configuration list for PBXProject "DigBar" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				Base,
+				en,
+			);
+			mainGroup = 775FBAFA6C0F359B722B242A;
+			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				1EEF41D700FE266868403EB8 /* XCRemoteSwiftPackageReference "Sparkle" */,
+			);
+			preferredProjectObjectVersion = 77;
+			productRefGroup = 1C450021D3347DA84CE8133E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				5962D41C566AB7713E116C5A /* DigBar */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		4A7BBFF403EB7CC01F7B1484 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FACE6B0BF3431D43A863B104 /* AppDelegate.swift in Sources */,
+				3FF45DFE24E99F3DB4724C82 /* AppSettings.swift in Sources */,
+				533B43EE61ABB8DAF6CC7B96 /* BinanceService.swift in Sources */,
+				CDB3623916E60321BD9808B4 /* BinanceWebSocketService.swift in Sources */,
+				7D6C9FF9EB08EC2EA70FCD8A /* CryptoHelper.swift in Sources */,
+				2C48B123260FD89954E1F4FB /* DataManager.swift in Sources */,
+				812F9EF79548F6922D1219D3 /* HelpView.swift in Sources */,
+				95446D261E44043D7CCCED53 /* KISService.swift in Sources */,
+				A4C484064F1D9552AD4A5CE2 /* KeychainHelper.swift in Sources */,
+				BA52ECD96A6DA139E6CCBFEC /* MarketIndexService.swift in Sources */,
+				D9983C832EE67C40DA211B4B /* Models.swift in Sources */,
+				9C1EBCC74D44C0ED89CEC854 /* PortfolioHistory.swift in Sources */,
+				5CE83A39DAC03979F2531A30 /* SettingsView.swift in Sources */,
+				4CC4417AD9C5CC3F963D0D1D /* StatusMenuView.swift in Sources */,
+				5DB37280D6BF2047E753CF3A /* TossInvestService.swift in Sources */,
+				027D22B9F8C550F95A28B045 /* WatchlistItem.swift in Sources */,
+				9101E920BF0A6B939CF2E31C /* WatchlistManager.swift in Sources */,
+				321E793B05CB3357DDCA38A9 /* main.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		1BC181B6AD27EDB7E2F87FD8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"DEBUG=1",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.9;
+			};
+			name = Debug;
+		};
+		55F61BFBD3154E6FBD5D425A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.9;
+			};
+			name = Release;
+		};
+		5DFA16EDA1C4C4552C1C7D5F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = DigBar.entitlements;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "@executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.digbar.app;
+				PRODUCT_NAME = DigBar;
+				SDKROOT = macosx;
+				SWIFT_VERSION = 5.9;
+			};
+			name = Debug;
+		};
+		CE6BDDA5EE2E127E282F1900 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = DigBar.entitlements;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "@executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.digbar.app;
+				PRODUCT_NAME = DigBar;
+				SDKROOT = macosx;
+				SWIFT_VERSION = 5.9;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		25C1BD53E7F50F675ED9953A /* Build configuration list for PBXNativeTarget "DigBar" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5DFA16EDA1C4C4552C1C7D5F /* Debug */,
+				CE6BDDA5EE2E127E282F1900 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		E1FC79D1401C433C931006FD /* Build configuration list for PBXProject "DigBar" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1BC181B6AD27EDB7E2F87FD8 /* Debug */,
+				55F61BFBD3154E6FBD5D425A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		1EEF41D700FE266868403EB8 /* XCRemoteSwiftPackageReference "Sparkle" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/sparkle-project/Sparkle";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.6.4;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		C7ED1A136087EB703D3EE9CA /* Sparkle */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1EEF41D700FE266868403EB8 /* XCRemoteSwiftPackageReference "Sparkle" */;
+			productName = Sparkle;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = 785BAA65F7D206DC543CA464 /* Project object */;
+}
