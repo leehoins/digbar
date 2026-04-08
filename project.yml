@@ -34,6 +34,8 @@ targets:
         SWIFT_VERSION: "5.9"
         MACOSX_DEPLOYMENT_TARGET: "14.0"
         LD_RUNPATH_SEARCH_PATHS: "@executable_path/../Frameworks"
+        DEVELOPMENT_LANGUAGE: ko
+        INFOPLIST_KEY_CFBundleDevelopmentRegion: ko
       debug:
         DEBUG_INFORMATION_FORMAT: dwarf
         SWIFT_OPTIMIZATION_LEVEL: "-Onone"

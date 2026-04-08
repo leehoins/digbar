@@ -23,6 +23,7 @@
 		9C1EBCC74D44C0ED89CEC854 /* PortfolioHistory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BF4D1EA32562FAE9A624396 /* PortfolioHistory.swift */; };
 		A4C484064F1D9552AD4A5CE2 /* KeychainHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FD0571ACBB2F900DED28335 /* KeychainHelper.swift */; };
 		BA52ECD96A6DA139E6CCBFEC /* MarketIndexService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00F225FFD4BD41ED276784A8 /* MarketIndexService.swift */; };
+		BB07E49A9362CF56AF6D3B8C /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6AA003C0EB0CEBB6989634F0 /* InfoPlist.strings */; };
 		CDB3623916E60321BD9808B4 /* BinanceWebSocketService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AB71CC85ED6DD035C4C3628 /* BinanceWebSocketService.swift */; };
 		D9983C832EE67C40DA211B4B /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB8935EF1E49965B6F19BF8C /* Models.swift */; };
 		FACE6B0BF3431D43A863B104 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D1DE3A9E9A4ECBD928D47BD /* AppDelegate.swift */; };
@@ -34,6 +35,7 @@
 		2564B90154E1F3126B9464E8 /* HelpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpView.swift; sourceTree = "<group>"; };
 		3AB71CC85ED6DD035C4C3628 /* BinanceWebSocketService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BinanceWebSocketService.swift; sourceTree = "<group>"; };
 		3FD0571ACBB2F900DED28335 /* KeychainHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainHelper.swift; sourceTree = "<group>"; };
+		6AA003C0EB0CEBB6989634F0 /* InfoPlist.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = InfoPlist.strings; path = ko.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		7D1DE3A9E9A4ECBD928D47BD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		866B26C6761EBD53D0BD59AB /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 		8BF4D1EA32562FAE9A624396 /* PortfolioHistory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PortfolioHistory.swift; sourceTree = "<group>"; };
@@ -87,6 +89,7 @@
 				7D1DE3A9E9A4ECBD928D47BD /* AppDelegate.swift */,
 				E8D2709784F44BF7D8D9CCE6 /* AppSettings.swift */,
 				866B26C6761EBD53D0BD59AB /* DataManager.swift */,
+				6AA003C0EB0CEBB6989634F0 /* InfoPlist.strings */,
 				B69942A3412ECEC5355B7934 /* main.swift */,
 				36178C3752ED63181E615846 /* Models */,
 				CBF54ACD4B153631053DF812 /* Services */,
@@ -151,6 +154,7 @@
 			buildConfigurationList = 25C1BD53E7F50F675ED9953A /* Build configuration list for PBXNativeTarget "DigBar" */;
 			buildPhases = (
 				4A7BBFF403EB7CC01F7B1484 /* Sources */,
+				CF2EEA2EDC2ED9068D4B43E1 /* Resources */,
 				2F3BACFA3C9028A9D4229DBF /* Frameworks */,
 			);
 			buildRules = (
@@ -182,6 +186,7 @@
 			knownRegions = (
 				Base,
 				en,
+				ko,
 			);
 			mainGroup = 775FBAFA6C0F359B722B242A;
 			minimizedProjectReferenceProxies = 1;
@@ -197,6 +202,17 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		CF2EEA2EDC2ED9068D4B43E1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BB07E49A9362CF56AF6D3B8C /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		4A7BBFF403EB7CC01F7B1484 /* Sources */ = {
@@ -354,7 +370,9 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = DigBar.entitlements;
 				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_LANGUAGE = ko;
 				INFOPLIST_FILE = Info.plist;
+				INFOPLIST_KEY_CFBundleDevelopmentRegion = ko;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 14.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.digbar.app;
@@ -370,7 +388,9 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = DigBar.entitlements;
 				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_LANGUAGE = ko;
 				INFOPLIST_FILE = Info.plist;
+				INFOPLIST_KEY_CFBundleDevelopmentRegion = ko;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 14.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.digbar.app;
