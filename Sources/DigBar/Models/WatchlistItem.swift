@@ -8,6 +8,8 @@ struct WatchlistItem: Identifiable {
     var targetPrice: Double?
     var direction: Direction?
     var lastAlertDate: Date?
+    var avgPrice: Double?       // 평단가
+    var quantity: Double?       // 보유 수량
 
     enum Direction: String, Codable, CaseIterable {
         case above = "이상"
@@ -19,7 +21,7 @@ struct WatchlistItem: Identifiable {
 
 extension WatchlistItem: Codable {
     enum CodingKeys: String, CodingKey {
-        case id, symbol, name, market, targetPrice, direction, lastAlertDate
+        case id, symbol, name, market, targetPrice, direction, lastAlertDate, avgPrice, quantity
     }
 
     init(from decoder: Decoder) throws {
@@ -31,6 +33,8 @@ extension WatchlistItem: Codable {
         targetPrice   = try? c.decode(Double.self, forKey: .targetPrice)
         direction     = try? c.decode(Direction.self, forKey: .direction)
         lastAlertDate = try? c.decode(Date.self, forKey: .lastAlertDate)
+        avgPrice      = try? c.decode(Double.self, forKey: .avgPrice)
+        quantity      = try? c.decode(Double.self, forKey: .quantity)
     }
 }
 

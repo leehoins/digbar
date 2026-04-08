@@ -1390,52 +1390,71 @@ struct WatchlistRow: View {
     @State private var editingTarget = false
     @State private var targetInput = ""
 
-    private var changeStr: String {
-        guard let p = price, p > 0,
-              let t = item.targetPrice, t > 0 else { return "" }
-        let pct = (p - t) / t * 100
+    // 현재가 + 원화 괄호 (미국주식)
+    private var priceStr: String {
+        guard let p = price else { return "조회 중..." }
+        let base = formatPrice(p)
+        if item.market == .us, usdKrwRate > 0 {
+            return "\(base) (\(krwStr(p)))"
+        }
+        return base
+    }
+
+    // 평단가 대비 수익률
+    private var pnlPctStr: String? {
+        guard let p = price, p > 0, let avg = item.avgPrice, avg > 0 else { return nil }
+        let pct = (p - avg) / avg * 100
         return String(format: "%+.2f%%", pct)
     }
 
-    private var priceStr: String {
-        guard let p = price else { return "조회 중..." }
+    // 평가금액 + 원화 괄호 (미국주식)
+    private var evalStr: String? {
+        guard let p = price, p > 0, let qty = item.quantity, qty > 0 else { return nil }
+        let total = p * qty
         switch item.market {
-        case .crypto: return String(format: "$%g", p)
-        case .us:     return String(format: "$%.2f", p)
         case .korea:
-            let fmt = NumberFormatter()
-            fmt.numberStyle = .decimal
-            fmt.maximumFractionDigits = 0
-            return "₩" + (fmt.string(from: NSNumber(value: p)) ?? "\(Int(p))")
+            let fmt = NumberFormatter(); fmt.numberStyle = .decimal; fmt.maximumFractionDigits = 0
+            return "₩" + (fmt.string(from: NSNumber(value: total)) ?? "\(Int(total))")
+        case .us:
+            let base = String(format: "$%.2f", total)
+            if usdKrwRate > 0 { return "\(base) (\(krwStr(total)))" }
+            return base
+        case .crypto:
+            return String(format: "$%.2f", total)
         }
     }
 
-    private var targetStr: String {
-        guard let t = item.targetPrice, let d = item.direction else { return "목표 미설정" }
-        switch item.market {
-        case .crypto: return "목표 $\(String(format: "%g", t)) \(d.rawValue)"
-        case .us:     return "목표 $\(String(format: "%.2f", t)) \(d.rawValue)"
-        case .korea:
-            let fmt = NumberFormatter()
-            fmt.numberStyle = .decimal
-            fmt.maximumFractionDigits = 0
-            let ts = fmt.string(from: NSNumber(value: t)) ?? "\(Int(t))"
-            return "목표 ₩\(ts) \(d.rawValue)"
-        }
+    // 평단가 표시 문자열
+    private var avgPriceStr: String? {
+        guard let avg = item.avgPrice, avg > 0 else { return nil }
+        return "평단 \(formatPrice(avg))"
     }
 
-    private var krwConvertedStr: String? {
-        guard item.market == .us, let p = price, usdKrwRate > 0 else { return nil }
-        let krw = p * usdKrwRate
-        let fmt = NumberFormatter()
-        fmt.numberStyle = .decimal
-        fmt.maximumFractionDigits = 0
-        return "₩" + (fmt.string(from: NSNumber(value: krw)) ?? "\(Int(krw))")
+    // 목표가 표시 문자열
+    private var targetStr: String? {
+        guard let t = item.targetPrice, let d = item.direction else { return nil }
+        return "목표 \(formatPrice(t)) \(d.rawValue)"
     }
 
     private var isTriggered: Bool {
         guard let p = price, let t = item.targetPrice, let d = item.direction else { return false }
         return d == .above ? p >= t : p <= t
+    }
+
+    private func formatPrice(_ p: Double) -> String {
+        switch item.market {
+        case .crypto: return String(format: "$%g", p)
+        case .us:     return String(format: "$%.2f", p)
+        case .korea:
+            let fmt = NumberFormatter(); fmt.numberStyle = .decimal; fmt.maximumFractionDigits = 0
+            return "₩" + (fmt.string(from: NSNumber(value: p)) ?? "\(Int(p))")
+        }
+    }
+
+    private func krwStr(_ usd: Double) -> String {
+        let krw = usd * usdKrwRate
+        let fmt = NumberFormatter(); fmt.numberStyle = .decimal; fmt.maximumFractionDigits = 0
+        return "₩" + (fmt.string(from: NSNumber(value: krw)) ?? "\(Int(krw))")
     }
 
     var body: some View {
@@ -1448,23 +1467,33 @@ struct WatchlistRow: View {
                         Image(systemName: "bell.fill").font(.caption2).foregroundStyle(.orange)
                     }
                 }
-                Text(targetStr).font(.caption2).foregroundStyle(.secondary)
+                // 평단가 또는 목표가
+                if let avg = avgPriceStr {
+                    Text(avg).font(.caption2).foregroundStyle(.secondary)
+                } else if let tgt = targetStr {
+                    Text(tgt).font(.caption2).foregroundStyle(.secondary)
+                } else {
+                    Text("목표 미설정").font(.caption2).foregroundStyle(.secondary)
+                }
+                // 평단·목표 둘 다 있으면 목표도 추가 표시
+                if avgPriceStr != nil, let tgt = targetStr {
+                    Text(tgt).font(.caption2).foregroundStyle(.secondary)
+                }
             }
             Spacer()
             VStack(alignment: .trailing, spacing: 2) {
                 Text(priceStr).font(.caption.bold())
-                if let krwStr = krwConvertedStr {
-                    Text(krwStr).font(.caption2).foregroundStyle(.secondary)
+                // 평단 대비 수익률
+                if let pnl = pnlPctStr {
+                    Text(pnl).font(.caption2.bold())
+                        .foregroundStyle(pnl.hasPrefix("+") ? .green : .red)
                 }
-                if !changeStr.isEmpty {
-                    let isPos = changeStr.hasPrefix("+")
-                    Text(changeStr).font(.caption2)
-                        .foregroundStyle(isPos ? .green : .red)
+                // 평가금액
+                if let eval = evalStr {
+                    Text(eval).font(.caption2).foregroundStyle(.secondary)
                 }
             }
-            Button {
-                onRemove()
-            } label: {
+            Button { onRemove() } label: {
                 Image(systemName: "xmark.circle.fill")
                     .foregroundStyle(.tertiary)
                     .font(.caption)
@@ -1487,6 +1516,8 @@ struct AddWatchlistItemSheet: View {
     @State private var selectedMarket: TossStock.Market = .korea
     @State private var targetPriceStr = ""
     @State private var direction: WatchlistItem.Direction = .above
+    @State private var avgPriceStr = ""
+    @State private var quantityStr = ""
     @State private var isSearching = false
     @State private var searchResults: [TossStock] = []
     @State private var currentPrice: Double? = nil
@@ -1586,6 +1617,18 @@ struct AddWatchlistItemSheet: View {
                 }
             }
 
+            // 평단가 + 수량
+            HStack(spacing: 12) {
+                VStack(alignment: .leading, spacing: 4) {
+                    Text("평단가 (선택)").font(.caption).foregroundStyle(.secondary)
+                    TextField("매수 평균가", text: $avgPriceStr).textFieldStyle(.roundedBorder)
+                }
+                VStack(alignment: .leading, spacing: 4) {
+                    Text("수량 (선택)").font(.caption).foregroundStyle(.secondary)
+                    TextField("보유 수량", text: $quantityStr).textFieldStyle(.roundedBorder)
+                }
+            }
+
             VStack(alignment: .leading, spacing: 8) {
                 HStack(spacing: 6) {
                     Text("목표가 (선택)").font(.caption).foregroundStyle(.secondary)
@@ -1618,13 +1661,17 @@ struct AddWatchlistItemSheet: View {
                 Spacer()
                 Button("추가") {
                     let finalName = name.isEmpty ? symbol : name
-                    let target = Double(targetPriceStr.replacingOccurrences(of: ",", with: ""))
+                    let target  = Double(targetPriceStr.replacingOccurrences(of: ",", with: ""))
+                    let avg     = Double(avgPriceStr.replacingOccurrences(of: ",", with: ""))
+                    let qty     = Double(quantityStr.replacingOccurrences(of: ",", with: ""))
                     let item = WatchlistItem(
                         symbol: symbol.trimmingCharacters(in: .whitespaces),
                         name: finalName,
                         market: selectedMarket,
                         targetPrice: target,
-                        direction: target != nil ? direction : nil
+                        direction: target != nil ? direction : nil,
+                        avgPrice: avg,
+                        quantity: qty
                     )
                     manager.add(item)
                     dismiss()
